@@ -1,0 +1,9 @@
+name: querystring
+version: 0.1.0
+
+authors:
+  - Milan Szekely <szekelymilan1125@gmail.com>
+
+crystal: 0.26.0
+
+license: MIT

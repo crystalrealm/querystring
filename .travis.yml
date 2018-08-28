@@ -1,0 +1,7 @@
+language: crystal
+crystal:
+  - latest
+
+script:
+  - crystal spec
+  - crystal spec --release --no-debug
