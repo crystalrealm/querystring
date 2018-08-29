@@ -1,6 +1,11 @@
 # querystring
 
-TODO: Write a description here
+[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-%23ff2520.svg)](https://shields.io)
+[![License](https://img.shields.io/github/license/crystalrealm/querystring.svg)](https://shields.io)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Build Status](https://travis-ci.com/crystalrealm/querystring.svg?branch=master)](https://travis-ci.com/crystalrealm/querystring)
+
+Parse and stringify HTTP query strings. The `Crystal` way! :tada:
 
 ## Installation
 
@@ -16,9 +21,34 @@ dependencies:
 
 ```crystal
 require "querystring"
+
+QString.parse("?a=2") 
+# => Hash {"a" => 2}
+
+QString.stringify({"a" => "test", "b" => 2})
+# => String "?a=test&b=2"
 ```
 
-TODO: Write usage instructions here
+## API
+
+### .parse(*String*)
+
+Parse a query string into a Hash.
+
+The returned object's class equals to `Hash(String, Int32 | String | Nil)`.
+
+### .stringify(*Hash*, *[options] : Hash*)
+
+Stringify a hash into a query string.
+
+The returned object's class equals to `String`.
+
+#### question_mark
+
+Type: `boolean`<br>
+Default: `true`
+
+Put a question mark (`?`) before the query.
 
 ## Contributing
 
